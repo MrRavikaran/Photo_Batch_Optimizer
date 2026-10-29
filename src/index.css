@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  
+  /* Custom scrollbar for dense panels */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Light Mode - High Contrast Crisp Typography, Vibrant Accents & Surfaces */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f1f5f9 !important; /* Soft slate-100 canvas */
+  color: #0f172a !important; /* Rich deep slate-900 */
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.2);
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.35);
+}
+
+/* Primary Headings, Titles & Brand Marks */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light .text-neutral-100,
+html.light .text-neutral-200,
+html.light .text-white,
+html.light strong {
+  color: #0f172a !important; /* Deepest Navy Slate */
+  font-weight: 600;
+}
+
+/* Secondary Labels, Parameters & Titles */
+html.light .text-neutral-300,
+html.light .text-neutral-400 {
+  color: #1e293b !important; /* Slate-800: sharp, rich, easily seen */
+  font-weight: 500;
+}
+
+/* Tertiary Metadata, Dimensions & Captions */
+html.light .text-neutral-500,
+html.light .text-neutral-600 {
+  color: #475569 !important; /* Slate-600: strong readable contrast */
+}
+
+/* Monospace numerals, dimensions & byte sizes */
+html.light .font-mono {
+  color: #0f172a !important;
+}
+
+/* High-Visibility Emerald Accents (Savings, Done States, Buttons) */
+html.light .text-emerald-400,
+html.light .text-emerald-300 {
+  color: #047857 !important; /* Vibrant Emerald-700 */
+  font-weight: 700;
+}
+
+html.light .text-emerald-500,
+html.light .text-emerald-500\/80 {
+  color: #065f46 !important; /* Deep Emerald-800 */
+  font-weight: 700;
+}
+
+/* Vibrant Savings Badges */
+html.light .bg-emerald-950,
+html.light .bg-emerald-950\/20,
+html.light .bg-emerald-950\/30,
+html.light .bg-emerald-950\/40,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-950\/80,
+html.light .bg-emerald-950\/90 {
+  background-color: #d1fae5 !important; /* Emerald-100: vibrant green highlight */
+  border-color: #6ee7b7 !important;     /* Emerald-300 */
+  color: #065f46 !important;            /* Emerald-800 */
+}
+
+html.light .border-emerald-800,
+html.light .border-emerald-800\/80,
+html.light .border-emerald-800\/50,
+html.light .border-emerald-900\/60 {
+  border-color: #34d399 !important; /* Emerald-400 */
+}
+
+/* High-Visibility Red & Amber for Warnings & Processing States */
+html.light .text-red-300,
+html.light .text-red-400 {
+  color: #b91c1c !important; /* Crisp Crimson */
+  font-weight: 600;
+}
+html.light .bg-red-950,
+html.light .bg-red-950\/60,
+html.light .bg-red-950\/90 {
+  background-color: #fee2e2 !important; /* Red-100 */
+  border-color: #fca5a5 !important;     /* Red-300 */
+  color: #991b1b !important;
+}
+
+html.light .text-amber-300,
+html.light .text-amber-400 {
+  color: #b45309 !important; /* Warm Amber-700 */
+  font-weight: 600;
+}
+html.light .bg-amber-950,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-950\/90 {
+  background-color: #fef3c7 !important; /* Amber-100 */
+  border-color: #fcd34d !important;     /* Amber-300 */
+  color: #92400e !important;
+}
+
+/* Surfaces & Cards - Crisp Pure White with Subtle Lift */
+html.light .min-h-screen {
+  background-color: #f8fafc !important; /* Slate-50 */
+}
+
+html.light header {
+  background-color: #ffffff !important;
+  border-bottom-color: #cbd5e1 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+html.light .bg-neutral-950 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-neutral-900 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+}
+
+html.light .bg-neutral-900\/40,
+html.light .bg-neutral-900\/50,
+html.light .bg-neutral-900\/60,
+html.light .bg-neutral-900\/70,
+html.light .bg-neutral-900\/80,
+html.light .bg-neutral-900\/90 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-neutral-950\/40,
+html.light .bg-neutral-950\/70,
+html.light .bg-neutral-950\/80,
+html.light .bg-neutral-950\/90,
+html.light .bg-neutral-950\/95 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Crisp Well-Defined Borders */
+html.light .border-neutral-800,
+html.light .border-neutral-800\/80,
+html.light .border-neutral-700,
+html.light .border-neutral-700\/80,
+html.light .border-neutral-700\/60,
+html.light .border-neutral-700\/50 {
+  border-color: #cbd5e1 !important; /* Slate-300 */
+}
+
+/* Action Buttons & Navigation Tabs */
+html.light .bg-neutral-800,
+html.light .bg-neutral-800\/80,
+html.light .bg-neutral-800\/50,
+html.light .bg-neutral-800\/30 {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .hover\:bg-neutral-800:hover,
+html.light .hover\:bg-neutral-700:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Inputs, Text Boxes & Select Dropdowns */
+html.light select,
+html.light input[type="text"],
+html.light input[type="number"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important; /* Slate-400 */
+  font-weight: 500;
+}
+
+html.light select:focus,
+html.light input[type="text"]:focus,
+html.light input[type="number"]:focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2) !important;
+}
+
+html.light input[type="range"] {
+  background-color: #cbd5e1 !important;
+  accent-color: #059669 !important;
+}
+
+/* Code Snippet Box in Light Mode */
+html.light pre code {
+  color: #065f46 !important;
+}
+
+/* Upload Drop Zone in Light Mode */
+html.light .border-dashed {
+  border-color: #94a3b8 !important;
+  background-color: #ffffff !important;
+}
+
+html.light .border-dashed:hover {
+  border-color: #059669 !important;
+  background-color: #f0fdf4 !important;
+}
